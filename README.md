@@ -1,7 +1,7 @@
-# RAG System Experiments
+# [ RAG System Experiments ]
 
 
-## Models & Components
+## ✅ Models & Components
 
 ### Embedding Model
 - **Model:** BAAI/bge-m3
@@ -28,7 +28,7 @@
 - **Reranking:** Not applied in the current baseline
 
 
-## Baseline Performance
+## ✅ Baseline Performance
 
 현재 구현한 기본 RAG 파이프라인의 단계별 Latency를 확인하기 위해 간단한 성능 측정을 진행했습니다.
 
