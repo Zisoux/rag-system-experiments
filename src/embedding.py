@@ -1,5 +1,5 @@
 from sentence_transformers import SentenceTransformer
-from chunking import load_document, split_into_chunks
+from src.chunking import load_document, split_into_chunks
 
 
 document = load_document("data/sample.txt")
