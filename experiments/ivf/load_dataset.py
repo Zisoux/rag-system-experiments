@@ -1,3 +1,6 @@
+import os
+import numpy as np
+
 from datasets import load_dataset
 from src.embedding import embed_documents
 
@@ -60,6 +63,17 @@ for docu in corpus:
     document_ids.append(document_id)
 
 
-## 너무 오래걸려서 대안 찾자. 0917에 계속...
 document_embeddings = embed_documents(documents)
-print("document_embeddings 개수: ",len(document_embeddings))
+
+embedding_path = "data/scifact_embeddings.npy"
+document_ids_path = "data/scifact_document_ids.npy"
+
+np.save(embedding_path, document_embeddings)
+np.save(document_ids_path, np.array(document_ids))
+
+print("Embedding 저장 완료\n")
+print("Embedding 파일:", os.path.abspath(embedding_path))
+print("Document ID 파일:", os.path.abspath(document_ids_path))
+
+print("Embedding 개수: ",len(document_embeddings))
+print("Embedding Dimension: ", document_embeddings.shape[1])

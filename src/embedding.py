@@ -19,7 +19,9 @@ model = SentenceTransformer("BAAI/bge-m3")
 def embed_documents(documents):
     embeddings = model.encode(
         documents,
-        normalize_embeddings=True
+        normalize_embeddings=True,
+        batch_size=16,
+        show_progress_bar=True
     )
 
     return embeddings

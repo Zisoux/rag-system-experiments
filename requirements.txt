@@ -3,3 +3,5 @@ faiss-cpu
 openai
 python-dotenv
 datasets
+pandas
+matplotlib
