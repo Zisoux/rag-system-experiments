@@ -31,6 +31,12 @@ plt.title("IVF nprobe vs Recall@10")
 plt.legend()
 plt.grid(True)
 
+plt.savefig(
+    "experiments/ivf/figures/nprobe_recall.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+
 plt.show()
 
 # 그래프 2 <IVF nprobe vs Latency>
@@ -49,6 +55,12 @@ plt.ylabel("Average Latency (ms)")
 plt.title("IVF nprobe vs Latency")
 plt.legend()
 plt.grid(True)
+
+plt.savefig(
+    "experiments/ivf/figures/nprobe_latency.png",
+    dpi=300,
+    bbox_inches="tight"
+)
 
 plt.show()
 
@@ -79,5 +91,11 @@ plt.ylabel("Recall@10")
 plt.title("IVF Accuracy-Latency Trade-off")
 plt.legend()
 plt.grid(True)
+
+plt.savefig(
+    "experiments/ivf/figures/accuracy_latency_tradeoff.png",
+    dpi=300,
+    bbox_inches="tight"
+)
 
 plt.show()
