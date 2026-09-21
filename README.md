@@ -80,7 +80,16 @@ FAISS `IndexFlatIP`를 비교 기준으로 설정하고, `IndexIVFFlat`의 `nlis
 
 ![Accuracy-Latency Trade-off](experiments/ivf/figures/accuracy_latency_tradeoff.png)
 
+`nprobe`가 증가할수록 더 많은 Cluster를 탐색하면서 Recall@10이 향상되었지만,
+동시에 Retrieval Latency도 증가하는 trade-off를 확인했습니다.
 
-`nprobe`가 증가할수록 Recall@10이 향상되는 동시에 Retrieval Latency도 증가했습니다.
+예를 들어 `nlist=100`에서 `nprobe`를 8에서 32로 증가시키면
+Recall@10은 0.6584에서 0.7668로 향상되었지만,
+평균 Latency도 3.82 ms에서 9.81 ms로 증가했습니다.
 
-IVF는 탐색 범위를 제한하면 FlatIP보다 낮은 Latency를 달성할 수 있었지만 Recall@10이 감소했습니다. 현재 5,183개 문서 규모에서는 FlatIP 수준의 Recall@10을 확보하도록 탐색 범위를 확대할 경우 IVF의 Latency 이점이 나타나지 않았습니다.
+또한 `nprobe=64` 이후에는 Recall@10이 0.7834로 더 이상 향상되지 않았지만,
+`nprobe=100`에서는 평균 Latency가 27.89 ms까지 증가했습니다.
+
+따라서 `nprobe`를 크게 설정하는 것이 항상 효율적인 것은 아니며,
+요구되는 Retrieval Accuracy와 허용 가능한 Latency를 고려하여
+적절한 탐색 범위를 선택할 필요가 있습니다.
