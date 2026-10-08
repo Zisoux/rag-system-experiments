@@ -40,15 +40,15 @@ SciFact 실험에서는 Corpus 규모가 작아 높은 Recall을 확보할 경�
 
 ### nprobe vs Recall@10
 
-![NQ nprobe vs Recall](experiments/nq/figures/nprobe_recall.png)
+![NQ nprobe vs Recall](figures/nprobe_recall.png)
 
 ### nprobe vs Retrieval Latency
 
-![NQ nprobe vs Latency](experiments/nq/figures/nprobe_latency.png)
+![NQ nprobe vs Latency](figures/nprobe_latency.png)
 
 ### Quality-Latency Trade-off
 
-![NQ Quality-Latency Trade-off](experiments/nq/figures/accuracy_latency_tradeoff.png)
+![NQ Quality-Latency Trade-off](figures/accuracy_latency_tradeoff.png)
 
 
 ### Analysis
